@@ -1,0 +1,25 @@
+{
+  "name": "html-better-hash-webpack-plugin",
+  "version": "0.0.1",
+  "description": "the better hash for html-webpack-plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hucy/html-better-hash-webpack-plugin.git"
+  },
+  "keywords": [
+    "hash",
+    "html",
+    "webpack",
+    "html-webpack-plugin"
+  ],
+  "author": "Hucy <yanghc1226@outlook.com> (https://github.com/Hucy)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hucy/html-better-hash-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/Hucy/html-better-hash-webpack-plugin#readme"
+}
