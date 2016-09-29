@@ -1,5 +1,6 @@
 // HtmlBetterHash.js
-
+var loaderUtils = require("loader-utils");
+var path=require('path')
 function Plugin(options) {
   // Configure your plugin with options...
 }
@@ -16,7 +17,9 @@ Plugin.prototype.apply = function(compiler) {
         htmlPluginData.assets.js.push(chunks[chunkItem].entry+'?vhash='+chunks[chunkItem].hash)
         if(chunks[chunkItem].css.length){
           chunks[chunkItem].css.forEach(function(cssItem){
-          htmlPluginData.assets.css.push(cssItem+'?vhash='+chunks[chunkItem].hash)
+          var filename=htmlPluginData.assets.publicPath?path.posix.relative(htmlPluginData.assets.publicPath,cssItem):cssItem;
+          var source = compilation.assets[filename].source();
+          htmlPluginData.assets.css.push(cssItem+'?vhash='+loaderUtils.getHashDigest(source))
           })
           
         }
