@@ -17,7 +17,7 @@ Plugin.prototype.apply = function(compiler) {
         htmlPluginData.assets.js.push(chunks[chunkItem].entry+'?vhash='+chunks[chunkItem].hash)
         if(chunks[chunkItem].css.length){
           chunks[chunkItem].css.forEach(function(cssItem){
-          var filename=htmlPluginData.assets.publicPath?path.posix.relative(htmlPluginData.assets.publicPath,cssItem):cssItem;
+          var filename=htmlPluginData.assets.publicPath?path.posix.relative(htmlPluginData.assets.publicPath,cssItem):path.posix.normalize(cssItem);
           var source = compilation.assets[filename].source();
           htmlPluginData.assets.css.push(cssItem+'?vhash='+loaderUtils.getHashDigest(source))
           })
