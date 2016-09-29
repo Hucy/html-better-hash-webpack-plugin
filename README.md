@@ -1,3 +1,7 @@
+# 作废
+ 发现已有更好的方案
+
+
 ## HTML better hash Webpack Plugin
 
 the better hash for `html-webpack-plugin`
